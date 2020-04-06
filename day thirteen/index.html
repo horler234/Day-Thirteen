@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&display=swap" rel="stylesheet">
+
+  <title>30 Days of Code - Day 13</title>
+</head>
+<body>
+  <div class="header-container">
+    <div class="logo-container">
+      <img class="logo-img" src="assets/logo.svg" alt="Logo">
+    </div>
+
+    <div class="navbar-container">
+      <ul class="navbar-list" id="navbar-toggle">
+        <li><a class="navbar-list-item" href="#">PRODUCT</a></li>
+        <li><a class="navbar-list-item" href="#">FEATURES</a></li>
+        <li><a class="navbar-list-item" href="#">PRICING</a></li>
+        <li><a class="navbar-list-item yeba" href="#">LOGIN</a></li>
+        <li class="dropdownLink"><a onclick="toggleDropdown()" href="javascript:;"><img src="assets/icon-hamburger.svg" alt="Img"> </a></li>
+        <li class="dropdownLink2"><a onclick="toggleDropdown()" href="javascript:;"><img src="assets/icon-close.svg" alt="Img"> </a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="word-container">
+    <div class="header-word">
+      <div class="flex-container">
+        <div class="new-container">
+          <h1 class="new-text">NEW</h1>
+        </div>
+        <div class="monograph-container">
+          <h1 class="monograph-text">MONOGRAPH DASHBOARD</h1>
+        </div>
+      </div>
+      <h1 class="powerful">POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+      <p class="project">Project planning and time tracking for agile teams</p>
+      <div class="flex2">
+        <div class="btn-container">
+          <button class="btn" type="button" name="button">SCHEDULE A DEMO</button>
+        </div>
+        <div class="preview-container">
+          <h1 class="preview">TO SEE A PREVIEW</h1>
+        </div>
+      </div>
+    </div>
+    <div class="img-container">
+      <img class="images" src="assets/illustration-devices.svg" alt="Phone">
+    </div>
+  </div>
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+
+  <script type="text/javascript">
+  function toggleDropdown() {
+      let navbarToggle = document.getElementById("navbar-toggle");
+      if (navbarToggle.className === 'navbar-list') {
+          navbarToggle.className += ' responsive';
+      } else {
+          navbarToggle.className = 'navbar-list';
+      }
+  }
+  </script>
+
+</body>
+
+
+</html>

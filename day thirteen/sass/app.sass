@@ -1,0 +1,243 @@
+$red: hsl(0, 100%, 68%)
+$very-dark-blue: hsl(230, 29%, 20%)
+$dark-grayish-blue: hsl(230, 11%, 40%)
+$grayish-blue: hsl(231, 7%, 65%)
+$light-grayish-blue: hsl(207, 33%, 95%)
+
+
+*
+  margin: 0
+  padding: 0
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+  body
+    font-family: 'Barlow', sans-serif
+
+h1
+  font-family: 'Barlow Condensed', sans-serif
+
+.header-container
+  display: flex
+
+.logo-container
+  width: 50%
+  padding-left: 100px
+  padding-top: 50px
+
+img.logo-img
+  width: 28px
+
+.navbar-container
+  width: 50%
+  background-color: $light-grayish-blue
+  border-radius: 0 0 0 50px
+  // height: 500px
+  padding: 50px 0 300px 100px
+
+ul.navbar-list
+  display: flex
+  list-style: none
+  li a.navbar-list-item
+    text-decoration: none
+    padding-left: 50px
+    font-size: 16px
+    color: $very-dark-blue
+    font-weight: 700
+    font-family: 'Barlow Condensed', sans-serif
+    letter-spacing: 1px
+    &:hover
+      text-decoration: underline
+
+ul.navbar-list li a.navbar-list-item.yeba
+  color: $grayish-blue
+  padding-left: 0
+
+
+ul.navbar-list li a.navbar-list-item.yeba:before
+    content: "\2022"
+    color: $grayish-blue
+    font-weight: bold
+    display: inline-block
+    padding-left: 50px
+    padding-right: 40px
+
+
+
+.dropdownLink, .dropdownLink2
+  display: none
+
+.header-word
+  width: 40%
+  padding-left: 100px
+  padding-top: 50px
+
+.word-container
+  display: flex
+  flex-wrap: wrap-reverse
+  justify-content: space-between
+  margin-top: -200px
+
+.flex-container
+  display: flex
+
+.new-container
+  background-color: $very-dark-blue
+  color: #fff
+  border-radius: 20px
+  width: 45px
+  padding: 2px 0
+  text-align: center
+
+.new-text
+  font-size: 16px
+
+.monograph-container
+  margin-left: 15px
+
+h1.monograph-text
+  font-size: 16px
+  color: $grayish-blue
+  font-weight: normal
+  letter-spacing: 4px
+
+h1.powerful
+  font-size: 4rem
+  color: $very-dark-blue
+
+p.project
+  color: $dark-grayish-blue
+  width: 250px
+  line-height: 1.5
+  margin-top: 20px
+
+.img-container
+  width: 48%
+  overflow-x: hidden
+
+.flex2
+  display: flex
+  margin-top: 50px
+
+img.images
+  width: 900px
+
+button.btn
+  background-color: $red
+  color: #fff
+  font-weight: 700
+  border: transparent
+  padding: 15px 25px
+  font-family: 'Barlow Condensed', sans-serif
+  letter-spacing: 2px
+  border-radius: 5px
+  cursor: pointer
+  transition: .2s ease-in-out
+  &:hover
+    background-color: transparentize($red, .4)
+
+.preview-container
+  padding-top: 15px
+  margin-left: 30px
+
+h1.preview
+  font-size: 16px
+  font-weight: normal
+  color: $grayish-blue
+  letter-spacing: 4px
+
+@media (max-width: 768px)
+  button.btn,
+  h1.preview
+    font-size: 12px
+
+  .navbar-container
+    padding-bottom: 400px
+
+  ul.navbar-list li a.navbar-list-item
+    display: none
+
+  ul.navbar-list li.dropdownLink
+      display: block
+      position: absolute
+      top: 45px
+      right: 30px
+
+  ul.navbar-list.responsive li.dropdownLink
+    display: none
+
+  ul.navbar-list.responsive li a.navbar-list-item.yeba:before
+    content: ""
+    width: 180px
+    border-top: 1px solid $light-grayish-blue
+
+
+  ul.navbar-list.responsive
+      flex-direction: column
+      text-align: center
+      width: 300px
+      margin-left: -150px
+      -webkit-box-shadow: -1px 1px 12px 0px rgba(0,0,0,0.75)
+      -moz-box-shadow: -1px 1px 12px 0px rgba(0,0,0,0.75)
+      box-shadow: -1px 1px 12px 0px rgba(0,0,0,0.75)
+      background: #fff
+      height: 230px
+      margin-top: 50px
+      border-radius: 5px
+      position: absolute
+
+  ul.navbar-list.responsive li
+      position: relative
+      top: 30px
+      // right: 30px
+      line-height: 2
+
+  ul.navbar-list.responsive li.dropdownLink2
+      display: block
+      position: absolute
+      top: -60px
+      right: 0px
+      background: none
+
+  ul.navbar-list.responsive li a.navbar-list-item,
+      display: block
+      padding-left: 0
+
+  .logo-container
+    padding: 0
+
+  img.logo-img
+    margin: 45px 0 0 30px
+
+  .navbar-container
+    padding-left: 0
+    padding-right: 0
+
+  .word-container
+    margin-top: -320px
+
+  .header-word,
+  .img-container
+    width: 100%
+
+  .flex-container
+    margin-bottom: 20px
+
+  img.images
+    width: 480px
+    margin-left: 10px
+
+  .header-word
+    padding-left: 30px
+    margin-bottom: 50px
+    margin-top: 70px
+
+  h1.powerful
+    font-size: 40px
+
+  .preview-container
+    // margin-left: 10px
+
+  h1.preview
+    letter-spacing: 3px
